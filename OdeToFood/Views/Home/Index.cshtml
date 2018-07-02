@@ -1,0 +1,16 @@
+﻿@model HomeIndexViewModel
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h1>@Model.MessageOfTheDay</h1>
+
+@foreach (var item in Model.Restaurants)
+{
+    @Html.Partial("_Summary", item);
+}
+
+<div>
+    <a asp-action="Create" asp-controller="Home">content</a>
+</div>
